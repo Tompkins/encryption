@@ -30,7 +30,7 @@ out_s = StringIO()
 # digest\nlength\npickle
 o = SimpleObject('digest matches')
 pickled_data = pickle.dumps(o)
-digest = make_digest(pickle_data)
+digest = make_digest(pickled_data)
 header = '%s %s' % (digest, len(pickled_data))
 print 'WRITING:', header
 out_s.write(header + '\n')
