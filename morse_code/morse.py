@@ -10,4 +10,7 @@ class Morse:
     def __init__(self, sheet = {}):
         self.sheet = reverse_key_value(sheet)
     def code(self, data):
-        pass
+        result = ''
+        for i in data:
+            result += self.sheet[i]
+        return result + '00'
