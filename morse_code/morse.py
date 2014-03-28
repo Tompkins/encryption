@@ -8,6 +8,6 @@ def reverse_key_value(a = {1:'1'}):
 
 class Morse:
     def __init__(self, sheet = {}):
-        self.sheet = sheet
+        self.sheet = reverse_key_value(sheet)
     def code(self, data):
         pass
