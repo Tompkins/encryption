@@ -16,16 +16,11 @@ class Morse:
             b[rev_dict[key]] = key
         return b
     def decode(self, data):
-        word_code = []
-        for i in data.split('0000'):
-            if not i == '':
-                word_code.append(i+'00')
         alpha_code = []
-        for i in word_code:
-            alpha_code.extend(i.split('00'))
+        for i in data.split('00')[:-2]:
+            alpha_code.append(i+'00')
         word = ''
         for i in alpha_code:
-            if not i == '':
-                word += self.sheet_2[i+'00']
+                word += self.sheet_2[i]
         return word
             
