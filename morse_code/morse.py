@@ -4,6 +4,7 @@ from data.morse_dict import sheet
 class Morse:
     def __init__(self, data = sheet):
         self.sheet = self.reverse_key_value(data)
+        self.sheet_2 = data
     def code(self, data):
         result = ''
         for i in data:
